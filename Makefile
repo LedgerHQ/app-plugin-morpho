@@ -19,8 +19,8 @@
 APPNAME = "Morpho"
 
 # Application version
-APPVERSION_M = 2
+APPVERSION_M = 3
 APPVERSION_N = 0
-APPVERSION_P = 0
+APPVERSION_P = 2
 
 include ethereum-plugin-sdk/standard_plugin.mk
