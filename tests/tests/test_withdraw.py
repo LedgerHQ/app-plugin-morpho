@@ -7,13 +7,12 @@ contract_re7_weth = load_contract(
 )
 
 # Test from https://etherscan.io/tx/0x01062eec602faa1abff730e565e4b9a4ae29cd68552c876206b3fe8a983fb060
-def test_withdraw(backend, firmware, navigator, test_name, wallet_addr):
+def test_withdraw(backend, navigator, test_name, wallet_addr):
     data = "0xb460af940000000000000000000000000000000000000000000000000000000000000001000000000000000000000000cc771952fde840e30c6802734e5ad20479c2959f000000000000000000000000cc771952fde840e30c6802734e5ad20479c2959f"
     run_test(
         contract_re7_weth, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr
