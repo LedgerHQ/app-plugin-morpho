@@ -194,6 +194,6 @@ typedef struct token_info_t {
     const uint8_t decimals;
 } token_info_t;
 
-// Check if the context structure will fit in the RAM section ETH will prepare for us
-// Do not remove!
+// Check that the plugin context structure will fit in the ethereum allocated memory.
+// for us Do not remove!
 ASSERT_SIZEOF_PLUGIN_CONTEXT(context_t);
