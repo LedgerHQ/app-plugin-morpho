@@ -146,9 +146,8 @@ void assign_vault_info(ethQueryContractUI_t *msg,
                        char token_ticker[MAX_TICKER_LEN],
                        uint8_t *token_decimals) {
     size_t i = 0;
-    while (
-        i < NUM_VAULTS_SUPPORTED &&
-        memcmp(vaults_list[i].address, msg->pluginSharedRO->txContent->destination, ADDRESS_LENGTH))
+    while (i < NUM_VAULTS_SUPPORTED &&
+           memcmp(vaults_list[i].address, msg->txContent->destination, ADDRESS_LENGTH))
         i++;
     if (i == NUM_VAULTS_SUPPORTED) {
         PRINTF("ADDRESS NOT MATCHED\n");

@@ -7,13 +7,12 @@ contract_morpho_blue = load_contract(
 )
 
 # Test from https://etherscan.io/tx/0x754f0081cb8ac906c2326829442c21659d64461aac23d58e1705a2e15242a5b4
-def test_set_authorization(backend, firmware, navigator, test_name, wallet_addr):
+def test_set_authorization(backend, navigator, test_name, wallet_addr):
     data = "0xeecea00000000000000000000000000027358775f25f5061294c0f888f65977cb02273ad0000000000000000000000000000000000000000000000000000000000000001"
     run_test(
         contract_morpho_blue, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr
